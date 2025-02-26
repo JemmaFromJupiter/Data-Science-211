@@ -89,5 +89,6 @@
 			},
 			"minItems": 1
 		}
-	}
+	},
+	"required": ["areas"]
 }
