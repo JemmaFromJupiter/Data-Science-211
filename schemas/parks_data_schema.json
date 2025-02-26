@@ -43,16 +43,16 @@
 								"start_time": {
 									"description": "The start time of the observation.",
 									"type": "string",
-									"format": "date-time"
+									"format": "time"
 								},
 								"end_time": {
 									"description": "The end time of the observation.",
 									"type": "string",
-									"format": "date-time"
+									"format": "time"
 								},
 								"total_time": {
 									"description": "The total time of the observation.",
-									"type": "string"
+									"type": "integer"
 								},
 								"conditions": {
 									"description": "The conditions of the park.",
