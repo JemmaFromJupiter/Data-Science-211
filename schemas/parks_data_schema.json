@@ -43,12 +43,12 @@
 								"start_time": {
 									"description": "The start time of the observation.",
 									"type": "string",
-									"format": "time"
+									"format": "short-time"
 								},
 								"end_time": {
 									"description": "The end time of the observation.",
 									"type": "string",
-									"format": "time"
+									"format": "short-time"
 								},
 								"total_time": {
 									"description": "The total time of the observation.",
