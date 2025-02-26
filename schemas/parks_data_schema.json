@@ -1,9 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://example.com/parks_data_schema.json",
+	"$id": "https://raw.githubusercontent.com/JemmaFromJupiter/Data-Science-211/refs/heads/main/schemas/parks_data_schema.json",
 	"title": "Areas",
 	"description": "A schema for the parks data.",
 	"type": "object",
+	"required": ["areas"],
 	"properties": {
 		"areas": {
 			"type": "array",
@@ -11,84 +12,89 @@
 			"items": {
 				"type": "object",
 				"description": "An area.",
-				"area_id": {
-					"type": "string",
-					"description": "The ID of the area."
-				},
-				"area_name": {
-					"type": "string",
-					"description": "The name of the area."
-				},
-				"parks": {
-					"type": "array",
-					"description": "The parks in the area.",
-					"items": {
-						"type": "object",
-						"description": "A park.",
-						"park_id": {
-							"type": "integer",
-							"description": "The ID of the park."
-						},
-						"park_name": {
-							"type": "string",
-							"description": "The name of the park."
-						},
-						"start_time": {
-							"type": "string",
-							"description": "The start time of the observation."
-						},
-						"end_time": {
-							"type": "string",
-							"description": "The end time of the observation."
-						},
-						"total_time": {
-							"type": "string",
-							"description": "The total time of the observation."
-						},
-						"conditions": {
-							"type": "string",
-							"description": "The conditions of the park."
-						},
-						"other_sightings": {
-							"type": "array",
-							"description": "Other sightings in the park.",
-							"items": {
-								"type": "string"
-							},
-							"minItems": 1
-						},
-						"litter": {
-							"type": "string",
-							"description": "How much litter was in the park."
-						},
-						"temp_and_weather": {
-							"type": "string",
-							"description": "The temperature and weather in the park."
-						},
-						"num_squirrels": {
-							"type": "integer",
-							"description": "The number of squirrels in the park."
-						},
-						"sighters": {
-							"type": "array",
-							"description": "The sighters in the park.",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 1
-						},
-						"num_sighters": {
-							"type": "integer",
-							"description": "The number of sighters in the park."
-						}
+				"properties": {
+					"area_id": {
+						"type": "string",
+						"description": "The ID of the area."
 					},
-					"required": ["park_id", "park_name", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"],
-					"minItems": 1
+					"area_name": {
+						"type": "string",
+						"description": "The name of the area."
+					},
+					"parks": {
+						"type": "array",
+						"description": "The parks in the area.",
+						"items": {
+							"type": "object",
+							"description": "A park.",
+							"properties": {
+								"park_id": {
+									"type": "integer",
+									"description": "The ID of the park."
+								},
+								"park_name": {
+									"type": "string",
+									"description": "The name of the park."
+								},
+								"start_time": {
+									"type": "string",
+									"description": "The start time of the observation.",
+									"format": "date-time"
+								},
+								"end_time": {
+									"type": "string",
+									"description": "The end time of the observation.",
+									"format": "date-time"
+								},
+								"total_time": {
+									"type": "string",
+									"description": "The total time of the observation."
+								},
+								"conditions": {
+									"type": "string",
+									"description": "The conditions of the park."
+								},
+								"other_sightings": {
+									"type": "array",
+									"description": "Other sightings in the park.",
+									"items": {
+										"type": "string"
+									},
+									"minItems": 1
+								},
+								"litter": {
+									"type": "string",
+									"description": "How much litter was in the park."
+								},
+								"temp_and_weather": {
+									"type": "string",
+									"description": "The temperature and weather in the park."
+								},
+								"num_squirrels": {
+									"type": "integer",
+									"description": "The number of squirrels in the park."
+								},
+								"sighters": {
+									"type": "array",
+									"description": "The sighters in the park.",
+									"items": {
+										"type": "integer"
+									},
+									"minItems": 1
+								},
+								"num_sighters": {
+									"type": "integer",
+									"description": "The number of sighters in the park."
+								}
+							},
+							"required": ["park_id", "park_name", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"],
+							"minItems": 1
+						}
+					}
 				},
 				"required": ["area_id", "area_name", "parks"]
 			},
 			"minItems": 1
 		}
-	},
-	"required": ["areas"]
+	}
 }
