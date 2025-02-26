@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://example.com/parks_data_schema.json",
+	"$id": "https://raw.githubusercontent.com/JemmaFromJupiter/Data-Science-211/refs/heads/main/schemas/parks_data_schema.json",
 	"title": "Area",
 	"description": "A schema for the parks data.",
 	"type": "object",
