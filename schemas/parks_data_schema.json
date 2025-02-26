@@ -30,7 +30,7 @@
 						"items": {
 							"description": "A park.",
 							"type": "object",
-							"required": ["park_id", "park_name", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"],
+							"required": ["park_id", "park_name", "date", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"],
 							"properties": {
 								"park_id": {
 									"description": "The ID of the park.",
@@ -40,15 +40,20 @@
 									"description": "The name of the park.",
 									"type": "string"
 								},
+								"date": {
+									"description": "The date of the observation.",
+									"type": "string",
+									"format": "date"
+								},
 								"start_time": {
 									"description": "The start time of the observation.",
 									"type": "string",
-									"format": "short-time"
+									"format": "time"
 								},
 								"end_time": {
 									"description": "The end time of the observation.",
 									"type": "string",
-									"format": "short-time"
+									"format": "time"
 								},
 								"total_time": {
 									"description": "The total time of the observation.",
