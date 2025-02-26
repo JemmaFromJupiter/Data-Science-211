@@ -80,9 +80,9 @@
 						"num_sighters": {
 							"type": "integer",
 							"description": "The number of sighters in the park."
-						},
-						"required": ["park_id", "park_name", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"]
+						}
 					},
+					"required": ["park_id", "park_name", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"],
 					"minItems": 1
 				},
 				"required": ["area_id", "area_name", "parks"]
