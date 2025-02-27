@@ -1,0 +1,126 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/JemmaFromJupiter/Data-Science-211/refs/heads/main/schemas/squirrel_data_schema.json",
+	"title": "Areas",
+	"description": "A schema for the parks data.",
+	"type": "object",
+	"required": ["areas"],
+	"properties": {
+		"areas": {
+			"description": "The areas.",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"description": "An area.",
+				"type": "object",
+				"required": ["area_id", "area_name", "parks"],
+				"properties": {
+					"area_id": {
+						"description": "The ID of the area.",
+						"type": "string"
+					},
+					"area_name": {
+						"description": "The name of the area.",
+						"type": "string"
+					},
+					"parks": {
+						"description": "The parks in the area.",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"description": "A park.",
+							"type": "object",
+							"required": ["park_id", "park_name", "squirrels"],
+							"properties": {
+								"park_id": {
+									"description": "The ID of the park.",
+									"type": ["integer", "number", "string"]
+								},
+								"park_name": {
+									"description": "The name of the park.",
+									"type": "string"
+								},
+								"squirrels": {
+									"description": "The date of the observation.",
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"description": "A squirrel.",
+										"type": "object",
+										"required": ["squirrel_id", "location"],
+										"properties": {
+											"squirrel_id": {
+												"description": "The ID of the squirrel.",
+												"type": "string"
+											},
+											"primary_colour": {
+												"description": "The primary colour of the squirrel.",
+												"type": "string"
+											},
+											"highlight_colour": {
+												"description": "The highlight colour of the squirrel.",
+												"type": "string"
+											},
+											"colour_notes": {
+												"description": "The colour notes of the squirrel.",
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"location": {
+												"description": "The location of the squirrel.",
+												"type": "object",
+												"required": ["latitude", "longitude"],
+												"properties": {
+													"where": {
+														"description": "The location of the squirrel.",
+														"type": "string"
+													},
+													"dist_from_ground": {
+														"description": "The distance from the ground.",
+														"type": "number"
+													},
+													"specific": {
+														"description": "The specific location of the squirrel.",
+														"type": "string"
+													},
+													"latitude": {
+														"description": "The latitude of the squirrel.",
+														"type": "number"
+													},
+													"longitude": {
+														"description": "The longitude of the squirrel.",
+														"type": "number"
+													}
+												}
+											},
+											"activities": {
+												"description": "The activities of the squirrel.",
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"human_interaction": {
+												"description": "The human interaction of the squirrel.",
+												"type": "string"
+											},
+											"other_notes": {
+												"description": "The other notes of the squirrel.",
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
