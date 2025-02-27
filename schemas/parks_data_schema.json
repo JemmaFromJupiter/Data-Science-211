@@ -13,13 +13,13 @@
 			"items": {
 				"description": "An area.",
 				"type": "object",
-				"required": ["area_id", "area_name", "parks"],
+				"required": ["area-id", "area-name", "parks"],
 				"properties": {
-					"area_id": {
+					"area-id": {
 						"description": "The ID of the area.",
 						"type": "string"
 					},
-					"area_name": {
+					"area-name": {
 						"description": "The name of the area.",
 						"type": "string"
 					},
@@ -30,13 +30,13 @@
 						"items": {
 							"description": "A park.",
 							"type": "object",
-							"required": ["park_id", "park_name", "date", "start_time", "end_time", "total_time", "num_squirrels", "sighters", "num_sighters"],
+							"required": ["park-id", "park-name", "date", "start-time", "end-time", "total-time", "num-squirrels", "sighters", "num-sighters"],
 							"properties": {
-								"park_id": {
+								"park-id": {
 									"description": "The ID of the park.",
 									"type": ["integer", "number", "string"]
 								},
-								"park_name": {
+								"park-name": {
 									"description": "The name of the park.",
 									"type": "string"
 								},
@@ -45,17 +45,17 @@
 									"type": "string",
 									"format": "date"
 								},
-								"start_time": {
+								"start-time": {
 									"description": "The start time of the observation.",
 									"type": "string",
 									"format": "time"
 								},
-								"end_time": {
+								"end-time": {
 									"description": "The end time of the observation.",
 									"type": "string",
 									"format": "time"
 								},
-								"total_time": {
+								"total-time": {
 									"description": "The total time of the observation.",
 									"type": "integer"
 								},
@@ -63,7 +63,7 @@
 									"description": "The conditions of the park.",
 									"type": "string"
 								},
-								"other_sightings": {
+								"other-sightings": {
 									"description": "Other sightings in the park.",
 									"type": "array",
 									"minItems": 1,
@@ -75,11 +75,11 @@
 									"description": "How much litter was in the park.",
 									"type": "string"
 								},
-								"temp_and_weather": {
+								"temp-and-weather": {
 									"description": "The temperature and weather in the park.",
 									"type": "string"
 								},
-								"num_squirrels": {
+								"num-squirrels": {
 									"description": "The number of squirrels in the park.",
 									"type": "integer"
 								},
@@ -91,7 +91,7 @@
 										"type": "integer"
 									}
 								},
-								"num_sighters": {
+								"num-sighters": {
 									"description": "The number of sighters in the park.",
 									"type": "integer"
 								}
