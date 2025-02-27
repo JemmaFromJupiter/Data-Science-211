@@ -1,0 +1,59 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/JemmaFromJupiter/Data-Science-211/refs/heads/main/schemas/stories_data_schema.json",
+	"title": "Areas",
+	"description": "A schema for the parks data.",
+	"type": "object",
+	"required": ["areas"],
+	"properties": {
+		"areas": {
+			"description": "The areas.",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"description": "An area.",
+				"type": "object",
+				"required": ["area_id", "area_name", "parks"],
+				"properties": {
+					"area_id": {
+						"description": "The ID of the area.",
+						"type": "string"
+					},
+					"area_name": {
+						"description": "The name of the area.",
+						"type": "string"
+					},
+					"parks": {
+						"description": "The parks in the area.",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"description": "A park.",
+							"type": "object",
+							"required": ["park_id", "park_name", "stories"],
+							"properties": {
+								"park_id": {
+									"description": "The ID of the park.",
+									"type": ["integer", "number", "string"]
+								},
+								"park_name": {
+									"description": "The name of the park.",
+									"type": "string"
+								},
+								"stories": {
+									"desctiption": "Squirrels, Parks & The City Stories",
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"description": "A story.",
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
