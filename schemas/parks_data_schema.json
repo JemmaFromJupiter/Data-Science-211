@@ -34,7 +34,7 @@
 							"properties": {
 								"park_id": {
 									"description": "The ID of the park.",
-									"type": ["integer", "number", "string"]
+									"type": "string"
 								},
 								"park_name": {
 									"description": "The name of the park.",
